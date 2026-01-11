@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結帳確認 - Dreamy Glow</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>結帳確認</h1>
+    </header>
+
+    <div class="checkout-box">
+        <h2 style="color:var(--accent-color); text-align:center;">📦 訂單明細</h2>
+        <div id="order-summary" style="margin: 20px 0;">
+        </div>
+
+        <div class="cart-total" style="justify-content:flex-end; font-size:1.5em; color:var(--accent-color);">
+            總計：<span id="final-total">NT$0</span>
+        </div>
+
+        <hr style="border:0; border-top:1px dashed #ccc; margin:20px 0;">
+
+        <h3>💳 付款方式</h3>
+        <div style="margin-top:15px;">
+            <label style="display:block; margin-bottom:10px; cursor:pointer;">
+                <input type="radio" name="pay" checked> 線上刷卡 (Visa/Master)
+            </label>
+            <label style="display:block; margin-bottom:10px; cursor:pointer;">
+                <input type="radio" name="pay"> 超商取貨付款
+            </label>
+        </div>
+
+        <div style="margin-top:30px; display:flex; gap:10px;">
+            <button onclick="window.location.href='menu.html'"
+                style="flex:1; padding:15px; border-radius:30px; border:1px solid #ccc; background:#fff; cursor:pointer;">
+                繼續購物
+            </button>
+            <button onclick="confirmOrder()" id="checkout-btn" style="flex:2;">
+                確認下單 💕
+            </button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
